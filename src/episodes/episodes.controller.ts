@@ -9,11 +9,11 @@ import {
   ParseIntPipe,
   Post,
   Query,
+  ValidationPipe,
 } from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 import { CreateEpisodeDTO } from '../dto/createEpisode.dto';
 import { ConfigService } from '../config/config.service';
-import { query } from 'express';
 import { IsPositivePipe } from 'src/pipes/is-positive.pipe';
 
 @Controller('episodes')
@@ -47,7 +47,7 @@ export class EpisodesController {
   }
 
   @Post()
-  create(@Body() input: CreateEpisodeDTO) {
+  create(@Body(ValidationPipe) input: CreateEpisodeDTO) {
     return this.episodeService.create(input);
   }
 }
