@@ -1,4 +1,5 @@
-import { IsBoolean, IsOptional, IsString } from 'class-validator';
+import { Type } from 'class-transformer';
+import { IsBoolean, IsDate, IsOptional, IsString } from 'class-validator';
 
 export class CreateEpisodeDTO {
   @IsString()
@@ -7,4 +8,8 @@ export class CreateEpisodeDTO {
   @IsBoolean()
   @IsOptional()
   featured?: boolean;
+
+  @IsDate()
+  @Type(() => Date)
+  publishedAt: Date;
 }
