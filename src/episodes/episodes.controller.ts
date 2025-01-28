@@ -1,16 +1,20 @@
 import {
   Body,
   Controller,
+  DefaultValuePipe,
   Get,
   HttpException,
   HttpStatus,
   Param,
+  ParseIntPipe,
   Post,
   Query,
 } from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 import { CreateEpisodeDTO } from '../dto/createEpisode.dto';
 import { ConfigService } from '../config/config.service';
+import { query } from 'express';
+import { IsPositivePipe } from 'src/pipes/is-positive.pipe';
 
 @Controller('episodes')
 export class EpisodesController {
@@ -19,7 +23,11 @@ export class EpisodesController {
     private configService: ConfigService, //example of importing an exported service from another module
   ) {}
   @Get()
-  findAll(@Query('sort') sort: 'asc' | 'desc' = 'desc') {
+  findAll(
+    @Query('sort') sort: 'asc' | 'desc' = 'desc',
+    @Query('limit', new DefaultValuePipe(5), ParseIntPipe, IsPositivePipe)
+    limit: number,
+  ) {
     return this.episodeService.findAll(sort);
   }
 
