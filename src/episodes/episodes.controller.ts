@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpException,
+  HttpStatus,
+  Param,
+  Post,
+  Query,
+} from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 import { CreateEpisodeDTO } from '../dto/createEpisode.dto';
 import { ConfigService } from '../config/config.service';
@@ -11,9 +20,7 @@ export class EpisodesController {
   ) {}
   @Get()
   findAll(@Query('sort') sort: 'asc' | 'desc' = 'desc') {
-    console.log(sort);
-
-    return 'all episode ';
+    return this.episodeService.findAll(sort);
   }
 
   @Get('featured') //Http method
@@ -22,8 +29,13 @@ export class EpisodesController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.episodeService.findOne(id);
+  async findOne(@Param('id') id: string) {
+    const episode = await this.episodeService.findOne(id);
+
+    if (!episode)
+      throw new HttpException('Epsiode not found', HttpStatus.NOT_FOUND);
+
+    return episode;
   }
 
   @Post()

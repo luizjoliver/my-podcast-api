@@ -28,7 +28,7 @@ export class EpisodesService {
   async create(createEpisodeDTO: CreateEpisodeDTO) {
     //async operation
     const newEpisode = { ...createEpisodeDTO, id: randomUUID() };
-    this.episodes.push();
+    this.episodes.push(newEpisode);
 
     return newEpisode;
   }
