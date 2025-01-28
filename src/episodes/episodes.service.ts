@@ -3,7 +3,7 @@ import { randomUUID } from 'crypto';
 import { CreateEpisodeDTO } from 'src/dto/createEpisode.dto';
 import { Episode } from 'src/entity/episode.entity.';
 
-@Injectable()
+@Injectable() //Provides dependecy injection into another class
 export class EpisodesService {
   private episodes: Episode[] = [];
 

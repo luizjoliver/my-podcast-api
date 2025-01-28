@@ -1,5 +1,5 @@
 export class Episode {
   name: string;
-  id: number;
+  id: string;
   featured?: boolean;
 }
