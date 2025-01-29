@@ -1,3 +1,5 @@
+<h1 align="center"> Projeto 'My-Podcast-api' Criado com o framework Nest</h1>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -5,7 +7,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">Um progessivo  framework <a href="http://nodejs.org" target="_blank">Node.js</a> para construir aplicações eficientes e escaláveis no server-side</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -22,78 +24,132 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) > repositório do framework Nest js.
 
-## Project setup
+## Instale as dependências do projeto
 
 ```bash
 $ npm install
 ```
 
-## Compile and run the project
+## Compile e rode o projeto
 
 ```bash
-# development
+# Desenvolvimento
 $ npm run start
 
-# watch mode
+# Modo ''watch''
 $ npm run start:dev
 
-# production mode
+# Modo de produção
 $ npm run start:prod
 ```
 
-## Run tests
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+# Documentação da API
+## Explicação API
 
-# test coverage
-$ npm run test:cov
-```
+Para a API funcionar , o usuário requisitante necessita passar o header "X-API-KEY":"nest-is-awesome" , este header foi criado para mostrar a funcionalidade "guards" do Nest Js , muito utilizado para ''autenticação'' de usuários , utilização de ''chaves de api '' e etc
 
-## Deployment
+**OBS**: O Swagger está configurado para vc passar o **"X-API-KEY"** , basta clicar em authorize e passar o valor **''nest-is-awesome''** .
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## Teste o Projeto no Swagger
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+O projeto **My-Podcast-api**, desenvolvido com o framework **Nest.js**, utiliza o **Swagger** para fornecer uma documentação clara e interativa das rotas da API. Isso facilita o teste das funcionalidades diretamente pela interface do Swagger, sem a necessidade de ferramentas externas.
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+Para testar as rotas e consultar a documentação da API, basta acessar o Swagger no seguinte endpoint:
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 🌐 **[localhost:port/api](http://localhost:port/api)**
 
-## Resources
 
-Check out a few resources that may come in handy when working with NestJS:
+## Explicação rotas do projeto
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+A aplicação possui as seguintes rotas:
 
-## Support
+### 1.🌐 **GET /Episodes**
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **Descrição**: Rota principal da aplicação > Retorna todos os episódios.
 
-## Stay in touch
+- **Exemplo de resposta**:
+  ```json
+  [
+    {
+    "name": "Primeiro episodio",
+    "featured": false,
+    "publishedAt": "2022-03-03",
+    "id": "70fc544d-9d69-4551-b3ea-ef975e9f3561"
+  },
+    {
+    "name": "Segundo episodio",
+    "featured": true,
+    "publishedAt": "2023-05-05",
+    "id": "312312412d-9d69-4551-321a-ef97542149f35"
+  },
+   {
+    "name": "Terceiro episodio",
+    "featured": false,
+    "publishedAt": "2024-08-08",
+    "id": "73fc544d-8i6l3-1420-a3ea-br975y93f3563"
+  }
+  ]
+
+### 2.🌐 **POST /Episodes**
+
+- **Descrição**: Rota  de criação de um episódio > Retorna o Episódio Criado.
+
+- **Exemplo de resposta**:
+  ```json
+  {
+    "name": "Terceiro episodio",
+    "featured": false,
+    "publishedAt": "2024-08-08",
+    "id": "73fc544d-8i6l3-1420-a3ea-br975y93f3563"
+  }
+
+### 3. 🌐**GET /Episodes/:id**
+
+- **Descrição**: Rota da aplicação oara retornar o episódio requisitado pelo ID > Retorna o Episódio requisitado.
+
+- **Exemplo de resposta( id: 70fc544d-9d69-4551-b3ea-ef975e9f3561)**:
+  ```json
+  
+    {
+
+     "name": "Primeiro episodio",
+     "featured": false,
+     "publishedAt": "2022-03-03",
+     "id": "70fc544d-9d69-4551-b3ea-ef975e9f3561"
+
+    }
+  
+
+### 4. 🌐**GET /Episodes/featured**
+
+- **Descrição**: Rota da aplicação para retornar todos os episódios destaques(Featured) > Retorna os Episódios destaques.
+
+- **Exemplo de resposta**:
+  ```json
+  [
+
+    {
+    "name": "Segundo episodio",
+    "featured": true,
+    "publishedAt": "2023-05-05",
+    "id": "312312412d-9d69-4551-321a-ef97542149f35"
+    }
+  ]
+
+
+
+## Acompanhe o Nest Js
 
 - Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+## Licença
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+O NestJs usa [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
