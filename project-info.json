@@ -4,6 +4,7 @@
     "techStack": ["Nest",  "Node", "TypeScript", "Swagger"],
     "services": "O Projeto é uma API , O My PodCast é uma API que segue o modelo REST , API Toda documentada com o Swagger",
     "about": "O My PodCast API foi desenvolvido para facilitar a gestão de episódios de podcast, permitindo a criação, edição, busca e exclusão de episódios de forma eficiente. Utilizando o framework NestJS, a API segue os princípios REST, garantindo escalabilidade e organização. Além disso, a documentação completa com Swagger torna a integração mais simples e intuitiva",
+    "type":"Back end",
     "imgs":{
         "banner":"https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/banner/banner.png",
         "desktopVersion":[""],
