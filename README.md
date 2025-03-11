@@ -52,7 +52,7 @@ $ npm run start:prod
 # Documentação da API
 ## Explicação API
 
-Para a API funcionar , o usuário requisitante necessita passar o header "X-API-KEY":"nest-is-awesome" , este header foi criado para mostrar a funcionalidade "guards" do Nest Js , muito utilizado para ''autenticação'' de usuários , utilização de ''chaves de api '' e etc
+Para a API funcionar , o usuário requisitante necessita passar o header "X-API-KEY":"nest-is-awesome" , este header foi criado para mostrar a funcionalidade "guards" do Nest Js , que é muito utilizado para ''autenticação'' de usuários / utilização de ''chaves de api '' e etc
 
 **OBS**: O Swagger está configurado para vc passar o **"X-API-KEY"** , basta clicar em authorize e passar o valor **''nest-is-awesome''** .
 
