@@ -7,7 +7,7 @@
     "type":"Back end",
     "imgs":{
         "banner":"https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/banner/banner.png",
-        "desktopVersion":[""],
-        "mobileVersion":[""]
+            "projectImgs":["https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project1.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project2.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project3.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project4.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project5.png"],
+            "projectDoc":["https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectdoc/doc.png","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectdoc/doc1.png"]
     }
 }
