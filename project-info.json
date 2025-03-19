@@ -6,7 +6,6 @@
     "about": "O My PodCast API foi desenvolvido para facilitar a gestão de episódios de podcast, permitindo a criação, edição, busca e exclusão de episódios de forma eficiente. Utilizando o framework NestJS, a API segue os princípios REST, garantindo escalabilidade e organização. Além disso, a documentação completa com Swagger torna a integração mais simples e intuitiva",
     "type":"Back end",
     "imgs":{
-        "banner":"https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/banner/banner.png",
             "projectImgs":["https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project1.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project2.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project3.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project4.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectimgs/project5.PNG"],
             "projectDoc":["https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectdoc/doc.PNG","https://raw.githubusercontent.com/luizjoliver/my-podcast-api/main/public/portfolio/projectdoc/doc1.PNG"]
     }
